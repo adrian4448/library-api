@@ -77,3 +77,10 @@
 2022-05-04 19:43:05.497  INFO 8584 --- [RMI TCP Connection(7)-172.31.144.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-05-04 19:43:05.498  INFO 8584 --- [RMI TCP Connection(7)-172.31.144.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-04 19:43:05.513  INFO 8584 --- [RMI TCP Connection(7)-172.31.144.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2022-05-04 19:58:48.705  INFO 8584 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-04 19:58:48.706  INFO 8584 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-05-04 19:58:48.715  INFO 8584 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2022-05-04 19:58:48.716  INFO 8584 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-04 19:58:48.957  WARN 8584 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-05-04 19:58:48.958  INFO 8584 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-04 19:58:48.964  INFO 8584 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

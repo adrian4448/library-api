@@ -121,27 +121,5 @@ public class BookController {
 		
 		return new PageImpl<LoanDTO>(list, pageable, result.getTotalElements());
 	}
-	
-	/**
-	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
-	public BookDTO create(@RequestBody BookDTO dto) {
-		// BookDTO dto = BookDTO.builder().author("Autor").title("Meu livro").isbn("1213212").id(1l).build();
-		Book entity = Book.builder()
-				.author(dto.getAuthor())
-				.title(dto.getTitle())
-				.isbn(dto.getIsbn())
-				.build();
-		
-		entity = service.save(entity);
-		
-		return BookDTO.builder()
-				.id(entity.getId())
-				.author(entity.getAuthor())
-				.title(entity.getTitle())
-				.isbn(entity.getIsbn())
-				.build();
-	}
-	*/
 
 }
